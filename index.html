@@ -33,7 +33,7 @@
                 };
 
                 return (
-                    <div style='textStyle'>
+                    <div style={textStyle}>
                         {this.props.display}
                     </div>
                 );
@@ -45,18 +45,18 @@
 
             getInitialState:function(){
                 return{
-                    count = 0;
+                    count:0,
                 };
             },
 
             render:function(){
                 const backgroundStyle = {
-                    backgroundColor: 'FFC53A',
+                    backgroundColor: '#FFC53A',
                     padding: 50,
                     width:250,
                     height:100,
                     borderRadius: 10,
-                    textAlight: 'center',
+                    textAlign: 'center',
                 };
 
                 const buttonStyle ={
@@ -70,12 +70,12 @@
                 };
 
                 return(
-                    <div style='backgroundStyle'>
+                    <div style={backgroundStyle}>
                         <Counter display = {this.state.count}/>
-                        <button style='buttonStyle'>+</button>
+                        <button style={buttonStyle}>+</button>
                     </div>
                 );
-            };
+            },
 
         });
        
