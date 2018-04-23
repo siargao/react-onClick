@@ -49,6 +49,19 @@
                 };
             },
 
+            increase: function(e){
+                let currentValue = this.state.count;
+                if(e.shiftKey){
+                    currentValue = this.state.count + 10;
+                }else{
+                    currentValue++;
+                };
+
+                this.setState({
+                    count: currentValue,
+                })
+            },
+
             render:function(){
                 const backgroundStyle = {
                     backgroundColor: '#FFC53A',
@@ -72,7 +85,7 @@
                 return(
                     <div style={backgroundStyle}>
                         <Counter display = {this.state.count}/>
-                        <button style={buttonStyle}>+</button>
+                        <button style={buttonStyle} onClick={this.increase}>+</button>
                     </div>
                 );
             },
